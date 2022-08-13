@@ -25,7 +25,7 @@ class Webservice {
                 return completion(.failure(.noData))
             }
             
-            let weatherResponse = try? JSONDecoder().decode(WeatherResponse.self, from: data)
+            let weatherResponse = try? JSONDecoder().decode(Response.self, from: data)
             if let weatherResponse = weatherResponse {
                 
             }
