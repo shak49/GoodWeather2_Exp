@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherResponse: Decodable {
+struct Response: Decodable {
     let name: String
     let weather: Weather
     let icons: [WeatherIcon]
@@ -25,7 +25,7 @@ struct WeatherResponse: Decodable {
     
 }
 
-extension WeatherResponse {
+extension Response {
     private enum ResponseKeys: String, CodingKey {
         case name
         case weather = "main"
