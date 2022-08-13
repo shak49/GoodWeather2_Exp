@@ -8,8 +8,18 @@
 import SwiftUI
 
 
-struct WeatherListScreen: View {
+enum Sheet: Identifiable {
+    var id: UUID {
+        return UUID()
+    }
     
+    case addNewCity
+    case settings
+}
+
+
+struct WeatherListScreen: View {
+    @State private var activeSheet: Sheet?
         
     var body: some View {
         
@@ -19,13 +29,20 @@ struct WeatherListScreen: View {
             }
             }
         .listStyle(PlainListStyle())
-        
+        .sheet(item: $activeSheet, content: { item in
+            switch item {
+            case .addNewCity:
+                AddCityScreen()
+            case .settings:
+                SettingsScreen()
+            }
+        })
         .navigationBarItems(leading: Button(action: {
-           
+            self.activeSheet = .settings
         }) {
             Image(systemName: "gearshape")
         }, trailing: Button(action: {
-            
+            self.activeSheet = .addNewCity
         }, label: {
             Image(systemName: "plus")
         }))
