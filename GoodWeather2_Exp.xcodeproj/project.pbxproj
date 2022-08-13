@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D9E05B828A86ABF00DC34E6 /* AddWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E05B728A86ABF00DC34E6 /* AddWeatherViewModel.swift */; };
 		8D07DA2A25F5C8730003CA24 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07DA2925F5C8730003CA24 /* ImageLoader.swift */; };
 		8D07DA2E25F5C8870003CA24 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07DA2D25F5C8870003CA24 /* URLImage.swift */; };
 		8D07DA3125F5D1960003CA24 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D07DA3025F5D1960003CA24 /* Date+Extensions.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D9E05B728A86ABF00DC34E6 /* AddWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWeatherViewModel.swift; sourceTree = "<group>"; };
 		8D07DA2925F5C8730003CA24 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		8D07DA2D25F5C8870003CA24 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		8D07DA3025F5D1960003CA24 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		8D5F0FFE25F2DE500057F0A1 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				6D9E05B728A86ABF00DC34E6 /* AddWeatherViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				8D5F0FD425F29C060057F0A1 /* GoodWeather2_ExpApp.swift in Sources */,
 				8D5F0FEE25F2A73C0057F0A1 /* AddCityScreen.swift in Sources */,
 				8D07DA3125F5D1960003CA24 /* Date+Extensions.swift in Sources */,
+				6D9E05B828A86ABF00DC34E6 /* AddWeatherViewModel.swift in Sources */,
 				8D07DA3425F5D4620003CA24 /* String+Extensions.swift in Sources */,
 				8D5F0FEA25F29D7F0057F0A1 /* View+Extensions.swift in Sources */,
 				8D5F0FE525F29CC80057F0A1 /* WeatherListScreen.swift in Sources */,
