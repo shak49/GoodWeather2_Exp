@@ -10,6 +10,7 @@ import Foundation
 
 struct WeatherViewModel {
     let weather: Weather
+    let id: UUID = UUID()
     
     var tempreture: Double {
         return weather.tempreture

@@ -13,6 +13,7 @@ struct GoodWeather2_ExpApp: App {
     var body: some Scene {
         WindowGroup {
             WeatherListScreen()
+                .environmentObject(Store())
         }
     }
 }
