@@ -19,20 +19,22 @@ enum Sheet: Identifiable {
 
 
 struct WeatherListScreen: View {
+    @EnvironmentObject var store: Store
     @State private var activeSheet: Sheet?
         
     var body: some View {
         
         List {
-            ForEach(1...20, id: \.self) { index in
-                Text("\(index)")
+            ForEach(store.weatherList, id: \.id) { weather in
+                WeatherCell(weather: weather)
             }
-            }
+        }
         .listStyle(PlainListStyle())
         .sheet(item: $activeSheet, content: { item in
             switch item {
             case .addNewCity:
                 AddCityScreen()
+                    .environmentObject(Store())
             case .settings:
                 SettingsScreen()
             }
@@ -55,29 +57,31 @@ struct WeatherListScreen: View {
 struct WeatherListScreen_Previews: PreviewProvider {
     static var previews: some View {
         return WeatherListScreen()
+            .environmentObject(Store())
     }
 }
 
 struct WeatherCell: View {
+    let weather: WeatherViewModel
     
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 15) {
-                Text("Houston")
+                Text(weather.city)
                     .fontWeight(.bold)
                 HStack {
                     Image(systemName: "sunrise")
-                    Text("\(Date().formatAsString())")
+                    Text("\(weather.sunrise.formatAsString())")
                 }
                 HStack {
                     Image(systemName: "sunset")
-                    Text("\(Date().formatAsString())")
+                    Text("\(weather.sunset.formatAsString())")
                 }
             }
             Spacer()
-            
-            
-            Text("72 F")
+            URLImage(url: Constants.Urls.weatherUrlAsStringByIcon(icon: weather.icon))
+                .frame(width: 50, height: 50)
+            Text("\(Int(weather.tempreture))")
         }
         .padding()
         .background(Color(#colorLiteral(red: 0.9133135676, green: 0.9335765243, blue: 0.98070997, alpha: 1)))
