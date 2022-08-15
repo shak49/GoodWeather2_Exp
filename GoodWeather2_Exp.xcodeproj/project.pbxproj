@@ -79,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				8D07DA2D25F5C8870003CA24 /* URLImage.swift */,
+				8D5F0FE325F29CB90057F0A1 /* Screens */,
+				8D5F0FFE25F2DE500057F0A1 /* View Models */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,8 +112,6 @@
 				8D07DA2725F5C8590003CA24 /* Loaders */,
 				8D5F0FF025F2C86D0057F0A1 /* Models */,
 				8D07DA2825F5C8620003CA24 /* Views */,
-				8D5F0FFE25F2DE500057F0A1 /* View Models */,
-				8D5F0FE325F29CB90057F0A1 /* Screens */,
 				8D5F0FD725F29C080057F0A1 /* Assets.xcassets */,
 				8D5F0FDC25F29C080057F0A1 /* Info.plist */,
 				8D5F0FD925F29C080057F0A1 /* Preview Content */,

@@ -34,9 +34,10 @@ struct WeatherListScreen: View {
             switch item {
             case .addNewCity:
                 AddCityScreen()
-                    .environmentObject(Store())
+                    .environmentObject(store)
             case .settings:
                 SettingsScreen()
+                    .environmentObject(store)
             }
         })
         .navigationBarItems(leading: Button(action: {
