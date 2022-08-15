@@ -12,6 +12,10 @@ class Store: ObservableObject {
     @Published var selectedUnit: TemperatureUnit = .kelvin
     @Published var weatherList: [WeatherViewModel] = []
     
+    init() {
+        selectedUnit = UserDefaults.standard.unit
+    }
+    
     func addWeather(weather: WeatherViewModel) {
         self.weatherList.append(weather)
     }

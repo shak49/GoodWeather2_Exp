@@ -27,6 +27,17 @@ struct WeatherViewModel {
     var sunset: Date {
         return weather.sunset
     }
+    
+    func getTempByUnit(unit: TemperatureUnit) -> Double {
+        switch unit {
+        case .kelvin:
+            return weather.tempreture
+        case .celsius:
+            return weather.tempreture - 273.15
+        case .fahrenheit:
+            return 1.8 * (weather.tempreture - 273) + 32
+        }
+    }
 }
 
 class AddWeatherViewModel: ObservableObject {
